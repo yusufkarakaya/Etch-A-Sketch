@@ -1,0 +1,85 @@
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+body {
+  background-color: rgb(233, 233, 233);
+}
+#main {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+#header {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#container {
+  display: grid;
+  grid-gap: 0em;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  min-width: 500px;
+  height: 500px;
+  background-color: white;
+}
+#buttons {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 10px;
+}
+#range {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+input {
+  width: 100%;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+}
+.grid-item {
+  padding: 0em;
+  text-align: center;
+}
+
+.button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 1px solid;
+  margin-right: 5px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+.button:hover {
+  color: cadetblue;
+  transition: 0.3s;
+}
+
+#sizeValue {
+  font-size: 2em;
+  margin-bottom: 0.1em;
+}
+
+#sizeSlider {
+  background: #82cfd0;
+  border: solid 1px #82cfd0;
+  border-radius: 8px;
+  height: 7px;
+  width: 356px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
