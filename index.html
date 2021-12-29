@@ -7,27 +7,31 @@
 </head>
 
 <body>
-    <header id="header">
-        <h1>Etch-A-Sketch</h1>
-    </header>
+    <main>
+        <header id="header">
+            <h1>Etch-A-Sketch</h1>
+        </header>
 
-    <section id="main">
-        <div id="container"></div>
-    </section>
+        <section id="main">
+            <div id="container"></div>
+        </section>
 
-    <section id="buttons">
-        <button id="eraser" class="button">Eraser</button>
-        <button id="sketch" class="button">Sketch</button>
-        <button id="clear" class="button">Clear</button>
-    </section>
+        <section id="buttons">
+            <input id="colorSelect" type="color">
+            <button id="eraser" class="button">Eraser</button>
+            <button id="sketch" class="button">Sketch Black</button>
+            <button id="clear" class="button">Clear All</button>
+        </section>
+        <p id="colorText">Color Pick</p>
 
-    <section id="range">
-        <div>
-            <p id="sizeValue"></p>
-            <input id="sizeSlider" type="range" value="16" min="1" max="64">
-        </div>
-    </section>
 
+        <section id="range">
+            <div>
+                <p id="sizeValue"></p>
+                <input id="sizeSlider" type="range" value="16" min="1" max="64">
+            </div>
+        </section>
+    </main>
 
     <script src="index.js"></script>
 </body>

@@ -5,6 +5,7 @@ const pixels = document.querySelectorAll('.grid-item');
 const eraser = document.getElementById('eraser');
 const sketch = document.getElementById('sketch');
 const clear = document.getElementById('clear');
+const colorPick = document.getElementById('colorSelect');
 
 function makeRows(size) {
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`
@@ -17,10 +18,9 @@ function makeRows(size) {
     }
     let gridPixels = container.querySelectorAll('div');
     gridPixels.forEach(gridPixel => gridPixel.addEventListener('mouseover', () => {
-        gridPixel.style.backgroundColor = 'black'
+        gridPixel.style.backgroundColor = 'black';
     }));
     sizeDisplay.innerHTML = size
-    console.log(size);
 };
 
 function changeSize() {
@@ -44,6 +44,13 @@ function sketchGrid() {
         gridPixel.style.backgroundColor = 'black'
     }));
 };
+function colorChange() {
+    let color = this.value
+    let gridPixels = container.querySelectorAll('div');
+    gridPixels.forEach(gridPixel => gridPixel.addEventListener('mouseover', () => {
+        gridPixel.style.backgroundColor = color;
+    }));
+}
 
 makeRows(16) //default grid
 
@@ -51,3 +58,4 @@ sizeValue.addEventListener('input', changeSize);
 clear.addEventListener('click', clearAllBackground);
 eraser.addEventListener('click', eraserGrid);
 sketch.addEventListener('click', sketchGrid);
+colorPick.addEventListener('input', colorChange);

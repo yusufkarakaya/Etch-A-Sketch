@@ -5,10 +5,11 @@
 body {
   background-color: rgb(233, 233, 233);
 }
-#main {
+main {
   display: flex;
-  justify-content: center;
-  gap: 2em;
+  margin: 0 auto;
+  max-width: 500px;
+  flex-direction: column;
 }
 #header {
   display: flex;
@@ -37,15 +38,7 @@ body {
   justify-content: center;
   text-align: center;
 }
-input {
-  width: 100%;
-  border: none;
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: pointer;
-  outline: none;
-}
+
 .grid-item {
   padding: 0em;
   text-align: center;
@@ -53,7 +46,7 @@ input {
 
 .button {
   border: none;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -82,4 +75,30 @@ input {
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
+}
+
+#colorSelect {
+  -webkit-appearance: none;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+}
+#colorSelect::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+#colorSelect::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+#text {
+  display: flex;
+  justify-content: center;
+}
+#colorText {
+  font-family: fantasy;
 }
